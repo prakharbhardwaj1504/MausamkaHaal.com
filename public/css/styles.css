@@ -1,0 +1,66 @@
+
+
+.main1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.main2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* background: linear-gradient(45deg, #fff0b3, #ffe375, #ffd08a); */
+    background: #C9F6FF;  /* clear sky*/
+    width: 50%;
+    height: 100%;
+}
+.city{
+    font-size: xxx-large;
+}
+.cards{
+    /* border: 2px solid red; */
+    display: flex;
+    /* flex-flow: row; */
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+    
+}
+.card1{
+    display: flex;
+height: 100px;
+width: 90px;
+/* border: 1px solid rgb(228, 23, 23); */
+justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+   /* margin-left: 50px;
+   margin-right: 50px; */
+   margin: 20px;
+   flex-wrap: wrap;
+   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+.card1:hover{
+    translate: scale(1.1);
+}
+
+.size{
+    font-size: 22px;
+}
+.heading{
+    display: block;
+}
+.temp{
+    border-bottom:1px solid red;
+    padding-bottom: 13px;
+}
+.sun{
+    border-bottom:1px solid red;
+    /* font-size: smaller  ; */
+    padding-bottom: 12px;
+    
+}
+

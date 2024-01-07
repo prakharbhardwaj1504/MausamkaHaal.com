@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MausamkaHaal⛅</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+   
+    
+</head>
+<header>
+    
+</header>
+<body >
+  
+
+<nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+        
+      <a class="navbar-brand"><div class="container ">
+    
+  </div>MausamkaHaal⛅</a>
+      <form class="d-flex" role="search" method="post" action="/get-loc">
+        <input class="form-control me-2"  placeholder="Search" aria-label="Search" name="name">
+        <input class="btn btn-outline-success" type="submit"></input>
+      </form>
+    </div>
+  </nav>
+  
+ 
+  <div class="main1">
+    <div class="main2">
+                
+        <% if (locals.cityName) { %>
+        <img  id="img" src="https://openweathermap.org/img/wn/<%= icon %>@2x.png" alt="image">
+          
+            <div class="city"> <%= cityName%> </div>
+            <h1><%= temperature %>°C</h1>
+            <h6>feels like: <b> <%= feels_like %></b></h6>
+            <h1 style="color:rgb(219, 108, 108);"><%= weatherDescription %></h1>
+            
+            
+            
+            <div class="cards">
+              <div class="card1">
+                <div class="temp">
+                  <img width="28" height="28" src="https://img.icons8.com/stickers/100/temperature-high.png"    alt="temperature-high"/>
+                 <%= temp_max %> 
+                </div>
+                <img width="28" height="28" src="https://img.icons8.com/stickers/100/temperature-low.png" alt="temperature-low"/><%= temp_min %>
+              </div>
+              <div class="card1">
+                <div class="heading">Humidity</div>
+                <img width="28" height="28" src="https://img.icons8.com/parakeet/48/humidity.png" alt="humidity"/>
+                <div class="size"><%= humidity %> </div>
+              </div>
+              <div class="card1">
+                <div class="sun"> <img width="28" height="28" src="https://img.icons8.com/color/48/sunrise.png" alt="sunrise"/><%=sunrise %></div>
+                <img width="28" height="28" src="https://img.icons8.com/color/48/sunset.png" alt="sunset"/><%= sunset %>
+              </div>
+              <div class="card1">
+                <div class="headind">Wind</div> 
+                <img width="28" height="28" src="https://img.icons8.com/offices/30/wind.png" alt="wind"/><div class="size"><%= windSpeed %> <%= winddir %></div>
+              </div>
+              
+            </div>
+          </div>
+          <% } %>
+  </div>
+  <% if (locals.error) { %>
+   <%= error %>
+  <% } %>
+  
+</body>
+</html>
